@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>PF 2014</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:url" content="http://pf.cermakovic.net/2014/" />
+    <meta property="og:title" content="PF 2014" />
+    <meta property="og:description" content="We wish you to the new year lot of love, friendship and health, be always in the same boat and reach all the places you want!" />
+    <meta property="og:image" content="http://pf.cermakovic.net/2014/pficon.jpg" />
+    <link type="text/css" rel="stylesheet" href="../jquery.qtip.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {margin: 0px; background: white; font-family: "Calibri", sans-serif; font-size: 20px;}
+      a { text-decoration: none; color: gray; font-size:13px; display: block; margin-bottom: 4px;}
+      a:hover { text-decoration: underline; }   
+      img { border: 0px none }
+      div.photo {position: absolute; left: 50%; top: 5px;}
+      div.lang  {  position: absolute; left: -512px; display: block; text-align:right;  }
+      .qtip-tipsy .qtip-content{
+        font-size: 24px;
+        margin: 8px;
+        font-family: 'Patrick Hand', cursive;
+        line-height: 30px;
+      }
+      #cf2 {
+        position:relative;
+        height:281px;
+        width:450px;
+        margin:0 auto;
+      }
+      div.lang img {
+        position:absolute;
+        left:0;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        -moz-transition: opacity 0.5s ease-in-out;
+        -o-transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      #pfareas {
+        opacity:0;
+      }
+      div.lang:hover #pfareas {
+        opacity:1;
+      }
+    </style>
+    
+</head>
+<body>
+<script type="text/javascript" src="../jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="../jquery.qtip.min.js"></script>
+
+<div class="photo">
+<a href="../">Česká verze</a>
+<div class="lang">
+<img id="pf" src="../pf2014.jpg" alt="PF 2014" height="683px" width="1024px"  />
+<img id="pfareas" usemap="#pfmap" src="../pf2014-areas.jpg" alt="PF 2014" height="683px" width="1024px"  />
+<map id="pfmap" name="pfmap">
+  <area class="lb" title="We wish you to the new year ..." shape="circle" coords="659,113,59" />
+  <area class="lt" title="... lot of love, ..." shape="circle" coords="803,305,31" />
+  <area class="lt" title="... friendship ..." shape="circle" coords="826,454,20" />
+  <area class="lt" title="... and health, ..." shape="circle" coords="770,508,30" />
+  <area class="rt" title="... be always in the same boat ..." shape="circle" coords="241,501,41" />
+  <area class="rb" title="... and reach all the places you want!" shape="circle" coords="420,326,58" />
+</map>
+</div>
+</div>
+<script>
+$('area.rt').qtip({
+    position: {
+        my: 'bottom left',
+        at: 'top right'
+    },
+    style: {
+        classes: 'qtip-tipsy'
+    }
+});
+$('area.rb').qtip({
+    position: {
+        my: 'top left',
+        at: 'bottom right'
+    },
+    style: {
+        classes: 'qtip-tipsy'
+    }
+});
+$('area.lt').qtip({
+    position: {
+        my: 'bottom right',
+        at: 'top left'
+    }   ,
+    style: {
+        classes: 'qtip-tipsy'
+    }
+});
+$('area.lb').qtip({
+    position: {
+        my: 'top right',
+        at: 'bottom left'
+    } ,
+    style: {
+        classes: 'qtip-tipsy'
+    }
+});
+</script>
+</body>
+</html>

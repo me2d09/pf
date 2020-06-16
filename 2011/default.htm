@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>PF 2011</title>
+    <meta property="og:title" content="PF 2011 - me2d09 & chnapik" />
+    <meta property="og:description" content="Buďte veselí ... a mějte se fajn jako my" />
+    <meta property="og:image" content="http://me2d09.cz/pf2011/pf_ico.jpg" />
+    <style type="text/css">
+      body {margin: 0px}   
+      img { position: absolute; left: -384px; display: block; border: 3px solid black}
+      div {position: absolute; left: 50%; top: 5px;}
+      #pf2, #pf3 { opacity: 0; filter: alpha(opacity=0);}
+    </style>
+    <script type="text/javascript">
+        var Ticks = 50;
+        Start();
+        function Start() {
+            setTimeout("Fade(1,'pf2')", 5000);
+            setTimeout("Fade(1,'pf3')", 13000);
+            setTimeout("document.getElementById('pf3').onclick = Reset", 15000);
+            setTimeout("document.getElementById('pf3').style.cursor = 'pointer'", 15000);
+            setTimeout("document.getElementById('pf3').title = 'klikni pro přehrání znovu'", 15000);
+        }
+        function Fade(nTick, eid) {
+            var element = document.getElementById(eid);
+            var newOpVal = nTick / Ticks;
+            element.style.opacity = newOpVal;
+            element.style.filter = 'alpha(opacity = ' + (newOpVal * 100) + ')';
+            if (nTick >= Ticks) return;
+            nTick++;
+            setTimeout("Fade(" + nTick + ",'" + eid + "')", 50);
+        }
+        function Reset() {
+            document.getElementById("pf3").style.opacity = document.getElementById("pf2").style.opacity = 0;
+            document.getElementById("pf3").style.filter = document.getElementById("pf2").style.filter = 'alpha(opacity=0)';
+            document.getElementById('pf3').onclick = document.getElementById('pf3').style.cursor = 
+                document.getElementById('pf3').title = '';
+            Start();
+        }
+    
+    
+    </script>
+</head>
+<body>
+<div>
+<img id="pf1" src="pf1.jpg" alt="PF 2011" height="900px" width="798px"  />
+<img id="pf2" src="pf2.jpg" alt="PF 2011" height="900px" width="798px"  />
+<img id="pf3" src="pf3.jpg" alt="PF 2011" height="900px" width="798px"  />
+</div>
+</body>
+</html>
