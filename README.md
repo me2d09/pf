@@ -15,3 +15,4 @@ Hi there. Here is list of our new year cards (pour feliciter), proudly hosted by
  - 2019 is missing, we failed to find suitable photo 🤦🤦‍♂️
  - [2020](2020/)
  - [2021](2021/)
+ - [2022](2022/)
